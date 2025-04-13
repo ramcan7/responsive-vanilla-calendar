@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario Vanilla</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" type="module"></script>
+    <title>Calendario Vanilla</title>
 </head>
 <body>
     <div class="app">
@@ -76,10 +77,11 @@
                  </div>
 
                  <div class="select desktop-only">
-                    <select class="select__select">
-                        <option class="day">Día</option>
-                        <option class="week">Semana</option>
-                        <option class="month" selected>Mes</option>
+                    <select class="select__select"
+                    data-view-select>
+                        <option value="day">Día</option>
+                        <option value="week">Semana</option>
+                        <option value="month" selected>Mes</option>
                     </select>
                     <svg xmlns="http://www.w3.org/2000/svg"
                     width="24" height="24" viewBox="0 0 24 24"
@@ -91,7 +93,8 @@
             </div>
             <div class="calendar">
                 <div class="month-calendar
-                month-calendar--five-week">
+                month-calendar--five-week"
+                data-month-calendar>
                     <ul class="month-calendar__day-of-week-list">
                         <li class="month-calendar__day-of-week">Dom</li>
                         <li class="month-calendar__day-of-week">Lun</li>
@@ -330,6 +333,7 @@
                         </ul>
                     </div>
                 </div>
+                
             </div>
         </main>
     </div>
