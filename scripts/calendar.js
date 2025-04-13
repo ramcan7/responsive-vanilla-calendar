@@ -9,14 +9,17 @@ export function initCalendar() {
             if(selectedView === "month") {
                 monthCalendarElement.style.display = "flex";
                 weekCalendarElement.style.display = "none";
+                dayCalendarElement.style.display = "none";
             }
             else if(selectedView === "week") {
                 weekCalendarElement.style.display = "flex";
                 monthCalendarElement.style.display = "none";
+                dayCalendarElement.style.display = "none";
             }
             else {
                 weekCalendarElement.style.display = "none";
                 monthCalendarElement.style.display = "none";
+                dayCalendarElement.style.display = "flex";
             }
         }
     )
