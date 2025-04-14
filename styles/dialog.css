@@ -17,9 +17,19 @@
     forwards ease-out;
 }
 
+.dialog--closing[open] {
+    animation: close-dialog var(--duration-sm)
+    forwards ease-out;
+}
+
 .dialog[open]::backdrop {
     background-color: var(--color-black);
     animation: open-backdrop var(--duration-sm)
+    forwards ease-out;
+}
+
+.dialog--closing[open]::backdrop {
+    animation: close-backdrop var(--duration-sm)
     forwards ease-out;
 }
 
@@ -79,11 +89,31 @@
     }
 }
 
+@keyframes close-dialog {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
 @keyframes open-backdrop {
     from {
         opacity: 0;
     }
     to {
         opacity: 0.85;
+    }
+}
+
+@keyframes close-backdrop {
+    from {
+        opacity: 0.85;
+    }
+    to {
+        opacity: 0;
     }
 }
