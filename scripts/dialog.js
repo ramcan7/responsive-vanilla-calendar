@@ -1,4 +1,4 @@
-import { waitUntilAnimationsFinish } from "./animation.js"
+import { waitUntilAnimationsFinish } from "./animation.js";
 
 export function initDialog(name) {
     const dialogElement = document.querySelector(`[data-dialog=${name}]`);
@@ -34,6 +34,7 @@ export function initDialog(name) {
     });
 
     return {
+        dialogElement,
         open() {
             dialogElement.showModal();
         },
